@@ -16,12 +16,19 @@ request.get({url: "https://example.com/somepath"});
 
 To send POST request to the server, you need the following code;
 ```dart
-request.post({url: "https://example.com/somepath", body: {'some_field1': 'some_data1', 'some_field2':'some_data2'}});
+request.post({
+        url: "https://example.com/somepath", 
+        body: {'some_field1': 'some_data1', 'some_field2':'some_data2'}
+    });
 ```
 
 To upload file with some other data to the server, you need the following code;
 ```dart
-request.multipart({url: "https://example.com/somepath", file: some_file, fields: {'some_field1': 'some_data1', 'some_field2':'some_data2'}});
+request.multipart({
+        url: "https://example.com/somepath", 
+        file: some_file, 
+        fields: {'some_field1': 'some_data1', 'some_field2':'some_data2'
+    }});
 ```
 
 ## Parameter Descriptions
