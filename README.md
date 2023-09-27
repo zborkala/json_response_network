@@ -1,39 +1,37 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# HTTP Client for JSON Response
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+If your server is only responding in json format. Then package is likely fit to you. This package mainly comes with three main functions; `get()` function for GET method, `post()` function for POST method and  `multipart()` for file uploading. 
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
+## Usage:
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
+First of all import the package as following;
 ```dart
-const like = 'sample';
+import 'package:json_response_network/json_response_network.dart' as request;
 ```
 
-## Additional information
+To send GET request to the server, you need the following code;
+```dart
+request.get({url: "https://example.com/somepath"});
+```
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+To send POST request to the server, you need the following code;
+```dart
+request.post({url: "https://example.com/somepath", body: {'some_field1': 'some_data1', 'some_field2':'some_data2'}});
+```
+
+To upload file with some other data to the server, you need the following code;
+```dart
+request.multipart({url: "https://example.com/somepath", file: some_file, fields: {'some_field1': 'some_data1', 'some_field2':'some_data2'}});
+```
+
+## Parameter Descriptions
+
+| Parameter | Descriptions |
+| --------- | ------------ |
+| url       | String type  |
+| headers    | Map<String, String> |
+| body      | Map<String, String> |
+| fields    | Map<String, String> |
+| file      | FILE type  |
+
+__NOTE :__ `headers` comes with all three above functions.

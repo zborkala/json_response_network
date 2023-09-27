@@ -1,7 +1,7 @@
 name: json_response_network
-description: A new Flutter package project.
-version: 0.0.1
-homepage:
+description: A simple http client for those servers which respond in json format.
+version: 1.0.0
+homepage: https://github.com/zborkala/json_response_network.git
 
 environment:
   sdk: '>=3.1.2 <4.0.0'

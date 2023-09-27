@@ -1,3 +1,7 @@
-## 0.0.1
+## 1.0.0
 
-* TODO: Describe initial release.
+* Three functions for basic network requests are included;
+    - get() for GET request
+    - post() for POST request
+    - multipart() for POST request with multipart data.
+
